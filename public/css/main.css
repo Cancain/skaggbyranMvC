@@ -138,6 +138,23 @@ form {
   align-items: start;
   justify-content: center; }
 
+.profile {
+  display: inline-grid;
+  background: var(--primary);
+  text-decoration: none;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  margin: 0 0;
+  align-items: start;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 945px;
+  width: 945px; }
+
+.profileBox {
+  margin-left: auto;
+  margin-right: auto; }
+
 .flashSuccess {
   color: white;
   text-align: center;
@@ -313,6 +330,12 @@ img {
 .gray {
   font-size: 1.2rem;
   margin-top: 0;
+  color: #747474; }
+
+.graySm {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
   color: #747474; }
 
 .wrapper {

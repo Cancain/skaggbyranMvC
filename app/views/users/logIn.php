@@ -3,7 +3,7 @@
     <div class="contactBg">
         <div class="contactBox">
         <h1>Logga in!</h1>
-        <p class="gray">Logga in för att administrera och publicera portfolion.</p>
+        <p class="gray">Välkommen in i stugvärmen.</p>
         <div class="icon"><i class="fas fa-sign-in-alt fa-5x"></i></div>
         </div>
 
