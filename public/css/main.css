@@ -98,12 +98,16 @@ form {
   form .formBtn {
     border: 0;
     border-radius: 7px;
-    background: #5681a0;
+    background: #386789;
     padding: 0.4rem;
     margin: 1rem 0 0 0;
     font-size: 1.2rem;
     cursor: pointer;
-    color: white; }
+    color: var(--light); }
+  form .formBtn:hover {
+    color: var(--dark);
+    background: #c7d8e4;
+    transition: all 0.5s ease-out; }
 
 .warning {
   color: #8B0000;
@@ -133,6 +137,15 @@ form {
   margin: 0 0;
   align-items: start;
   justify-content: center; }
+
+.flashSuccess {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem; }
+
+.reginfo {
+  padding-top: 10px;
+  font-size: 1.2rem; }
 
 .contactBox .icon {
   width: 50;
