@@ -7,6 +7,8 @@ require_once 'helpers/sessionHelpers.php';
 //Load config
 require_once 'config/config.php';
 
+// die(APPROOT);
+
 //Load libraries
 // require_once 'libraries/Controller.php';
 // require_once 'libraries/Core.php';
