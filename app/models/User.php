@@ -63,4 +63,13 @@ class User{
             return false;
         }
     }
+
+    public function getAllUsers(){
+        //Set up query
+        $this->db->query('SELECT * FROM users');
+
+        $data = $this->db->resultSet();
+
+        return $data;
+    }
 }

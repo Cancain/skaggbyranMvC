@@ -2,7 +2,7 @@
     <div class="grid">
 
       <!-- User section -->
-      <?php if(!$_SESSION): ?>
+      <!-- <?php if(!$_SESSION): ?>
       <div class="userBox">
         <ul id="userMenu">
           <a href="<?php echo URLROOT?>users/logIn">
@@ -13,7 +13,7 @@
           </a>
         </ul>
       </div>
-      <?php endif; ?>
+      <?php endif; ?> -->
 
       <?php if($_SESSION):?>
       <div class="userBox">
@@ -23,6 +23,9 @@
           </a>
           <a href="<?php echo URLROOT ?>users/logout">
             <li id="logOutBtn" class="navH">Logga ut</li>
+          </a>
+          <a href="<?php echo URLROOT ?>users/showUsers">
+            <li id="logOutBtn" class="navH">Användare</li>
           </a>
         </ul>
       </div>

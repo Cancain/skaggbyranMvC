@@ -181,4 +181,14 @@ class Users extends Controller{
 
         redirect('pages/index');
     }
+
+    public function showUsers(){
+        $data = $this->userModel->getAllUsers();
+        $this->view('users/showUsers', $data);
+    }
+
+    public function editUser($id){
+        $data = $this->userModel->getUserById($id);
+        $this->view('users/editUser', $data);
+    }
 }

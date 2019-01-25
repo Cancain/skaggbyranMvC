@@ -97,6 +97,7 @@ class Portfolios extends Controller{
             //make sure all errors are empty
             if (empty($data['titleErr']) && empty($data['bodyErr'])){
                 $this->portfolioModel->editPortfolioById($data);
+                redirect('portfolios/portfolio');
             }
 
 
