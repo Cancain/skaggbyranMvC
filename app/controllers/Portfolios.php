@@ -90,6 +90,10 @@ class Portfolios extends Controller{
                 $data['body'] = 'Inlägget kan inte vara tomt';
             }
 
+            //make sure all errors are empty
+            if (empty($data['titleErr']) && empty($data['bodyErr'])){
+                
+            }
 
 
         } else {

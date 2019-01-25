@@ -52,8 +52,8 @@ class Portfolio{
         }
     }
 
-    public function editPortfolioById($data){
-        
+    public function editPortfolioById($id){
+        $this->db->query('')
     }
 
     
