@@ -53,7 +53,7 @@ class Portfolio{
     }
 
     public function editPortfolioById($id){
-        $this->db->query('')
+        $this->db->query('');
     }
 
     
