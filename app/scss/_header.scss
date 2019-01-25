@@ -85,15 +85,19 @@
   }
 
   #dropDownMenuContact{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       background: $primaryColor;
       color: lighten($primaryTextColor, 20%);
       text-align: center;
-      margin: 0;
-      padding: 0 0 1rem 0;
+      margin: 7.9rem 0 0 0;
+      padding: 0 0 0 0;
       font-size: 1.1rem;
       text-transform: uppercase;
       & ul{
-        margin: 0;
+        margin: 0 0 0 4rem;
         cursor: pointer;
         list-style-type: none;
       }
