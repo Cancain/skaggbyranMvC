@@ -52,8 +52,20 @@ class Portfolio{
         }
     }
 
-    public function editPortfolioById($id){
-        $this->db->query('UPDATE');
+    public function editPortfolioById($data){
+
+        //Set up query
+        $this->db->query('UPDATE portfolio
+                            SET title = :title, body = :body
+                            WHERE id = :id');
+
+        //bind values
+        $this->db->bind('title', $data['title']);
+        $this->db->bind('body', $data['body']);
+        $this->db->bind('id', $data['id']);
+
+        //execute
+        $this->db->execute();
     }
 
     

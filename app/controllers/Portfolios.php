@@ -69,11 +69,15 @@ class Portfolios extends Controller{
 
     public function edit($id){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $portfolio = $this->portfolioModel->getPortfolioById($id);
+            
+            
             //sanitize data
             filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
             //Set data to array
             $data = [
+                'id' => $portfolio->id,
                 'title' => trim($_POST['title']),
                 'body' =>  trim($_POST['body']),
                 'titleErr' => '',
@@ -92,7 +96,7 @@ class Portfolios extends Controller{
 
             //make sure all errors are empty
             if (empty($data['titleErr']) && empty($data['bodyErr'])){
-                
+                $this->portfolioModel->editPortfolioById($data);
             }
 
 
@@ -100,6 +104,7 @@ class Portfolios extends Controller{
             $portfolio = $this->portfolioModel->getPortfolioById($id);
 
             $data = [
+                'id' => $portfolio->id,
                 'title' => $portfolio->title,
                 'body' => $portfolio->body,
                 'titleErr' => '',
