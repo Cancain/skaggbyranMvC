@@ -45,23 +45,26 @@
         width: 30vw;
       }
     }
-    & .formBtn {
-      border: 0;
-      border-radius: 7px;
-      background: $secondaryTextColor;
-      padding: 0.4rem;
-      margin: 1rem 0 0 0;
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: var(--light);
-    }
-    & .formBtn:hover {
-      color: var(--dark);
-      background: lighten($primaryTextColor, 20%);
-    @include easeOut();
-    }
+
+
+  }
+   .formBtn {
+    border: 0;
+    border-radius: 7px;
+    background: $secondaryTextColor;
+    padding: 0.3rem;
+    margin: 1rem 0 0 0;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--light);
+  }
+  .formBtn:hover {
+    color: var(--dark);
+    background: lighten($primaryTextColor, 20%);
+  @include easeOut();
   }
 
+  
   .warning{
     color: #8B0000;
     border: 2px;

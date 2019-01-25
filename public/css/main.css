@@ -9,7 +9,7 @@
     .grid {
       grid-template-columns: 0.4fr 0.6fr 1.5fr 0.5fr;
       padding-top: 1rem;
-      grid-template-rows: 0.02fr 0.2fr; } }
+      grid-template-rows: 20px 100px; } }
 
 .box1 {
   grid-column: 2/4;
@@ -95,19 +95,21 @@ form {
     @media (min-width: 768px) {
       form .formMsg {
         width: 30vw; } }
-  form .formBtn {
-    border: 0;
-    border-radius: 7px;
-    background: #386789;
-    padding: 0.4rem;
-    margin: 1rem 0 0 0;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: var(--light); }
-  form .formBtn:hover {
-    color: var(--dark);
-    background: #c7d8e4;
-    transition: all 0.5s ease-out; }
+
+.formBtn {
+  border: 0;
+  border-radius: 7px;
+  background: #386789;
+  padding: 0.3rem;
+  margin: 1rem 0 0 0;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--light); }
+
+.formBtn:hover {
+  color: var(--dark);
+  background: #c7d8e4;
+  transition: all 0.5s ease-out; }
 
 .warning {
   color: #8B0000;
@@ -253,15 +255,19 @@ li:hover {
       width: 400px; } }
 
 #dropDownMenuContact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #5681a0;
   color: #c7d8e4;
   text-align: center;
-  margin: 0;
-  padding: 0 0 1rem 0;
+  margin: 7.9rem 0 0 0;
+  padding: 0 0 0 0;
   font-size: 1.1rem;
   text-transform: uppercase; }
   #dropDownMenuContact ul {
-    margin: 0;
+    margin: 0 0 0 4rem;
     cursor: pointer;
     list-style-type: none; }
   #dropDownMenuContact li {
@@ -344,6 +350,11 @@ img {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0;
+  color: #747474; }
+
+.smaller {
+  font-size: 0.8rem !important;
+  margin-top: 0;
   color: #747474; }
 
 .wrapper {

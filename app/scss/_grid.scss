@@ -9,7 +9,7 @@
     @include tabletUp() {
       grid-template-columns: 0.4fr 0.6fr 1.5fr 0.5fr;
       padding-top: 1rem;
-      grid-template-rows: 0.02fr 0.2fr;
+      grid-template-rows: 20px 100px;
     }
   }
   
