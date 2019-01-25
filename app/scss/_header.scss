@@ -19,6 +19,12 @@
   #navBgLg {
     background: $primaryColor;
     box-sizing: border-box;
+    @include tabletUp() {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
   }
   
   #hambBtn {
