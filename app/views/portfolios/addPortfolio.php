@@ -1,11 +1,12 @@
 <?php require APPROOT . '/views/inc/header.php'?>
+<div class="wrapper">
 <form action="" method="post">
     <?php flash('addPortfolioSuccess') ?>
 
 
     <div class="formBox">
         <label for="title">Title</label>
-        <input type="text" name="title" value="<?php echo $data['title'] ?>">
+        <input  class="formField" type="text" name="title" value="<?php echo $data['title'] ?>">
 
         <?php if($data['titleErr']): ?>
         <span class="warning">
@@ -14,9 +15,9 @@
     </div>
 
     <div class="formBox">
-        <label for="body"></label>
-        <textarea name="body" id="" cols="30" rows="10"><?php echo $data['body'] ?></textarea>
-        <input type="submit" value="Lägg till">
+        <label for="body">Content</label>
+        <textarea class="formMsg" name="body" id="" cols="30" rows="10"><?php echo $data['body'] ?></textarea>
+        <input class="formBtn" type="submit" value="Lägg till">
 
         <?php if($data['bodyErr']): ?>
         <span class="warning">
@@ -26,5 +27,5 @@
 
 </form>
 
-
+</div>
 <?php require APPROOT . '/views/inc/footer.php'?>

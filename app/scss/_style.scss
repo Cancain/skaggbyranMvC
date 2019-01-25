@@ -63,6 +63,11 @@ img{
     margin-bottom: 0;
     color: $contentText;
  }
+ .smaller {
+    font-size: 0.8rem !important;
+    margin-top: 0;
+    color: $contentText;
+ }
 .wrapper {
     grid-gap: 20px;
     padding: 0 0;
