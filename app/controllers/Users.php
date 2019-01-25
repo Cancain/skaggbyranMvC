@@ -39,7 +39,6 @@ class Users extends Controller{
                         //start the user session
                         $this->startUserSession($loggedInUser);
                         flash('loginSuccess', 'Du är nu inloggad');
-                        
                         //redirect to index
                         redirect('pages/index');
                     } else {

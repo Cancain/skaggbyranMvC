@@ -2,7 +2,7 @@
 <?php require APPROOT . '/views/inc/header.php'?>
 <div class="wrapper">
 <?php if($data['user'] && $data['user']->isAdmin): ?>
-<button>Lägg till</button>
+<a href="<?php echo URLROOT?>portfolios/add/"><button>Lägg till</button></a>
 
 <?php endif; ?>
 
@@ -16,7 +16,7 @@
         <p><?php echo utf8_encode($post->body); ?></p>
         <?php if($data['user'] && $data['user']->isAdmin): ?>
 <a href="<?php echo URLROOT?>portfolios/remove/<?php echo $post->id ?>"><button clas="btn">Ta bort</button></a>
-<a href="<?php echo URLROOT?>portfolios/edit"><button clas="btn">Ändra</button></a>
+<a href="<?php echo URLROOT?>portfolios/edit/<?php echo $post->id ?>"><button clas="btn">Ändra</button></a>
 
 <?php endif; ?>
     </header>
