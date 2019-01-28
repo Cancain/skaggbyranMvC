@@ -193,6 +193,7 @@ class Users extends Controller{
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             
             $data = [
+                'userId' => htmlspecialchars(trim($_POST['userId'])),
                 'userName' => htmlspecialchars(trim($_POST['userName'])),
                 'firstName' => htmlspecialchars(trim($_POST['firstName'])),
                 'lastName' => htmlspecialchars(trim($_POST['lastName'])),
@@ -213,31 +214,25 @@ class Users extends Controller{
             if(empty($data['userName'])){
                 $data['userNameErr'] = 'Du måste ange ett användarnamn';
             }
-            //Verify username
+            //Verify first name
             if(empty($data['firstName'])){
                 $data['firstNameErr'] = 'Du måste ange ett förnamn';
             }
-            //Verify username
+            //Verify last name
             if(empty($data['lastName'])){
                 $data['lastNameErr'] = 'Du måste ange ett efternamn';
             }
-            //Verify username
+            //Verify email
             if(empty($data['email'])){
                 $data['emailErr'] = 'Du måste ange en email';
             }
-            //Verify username
-            if(empty($data['password'])){
-                $data['passwordErr'] = 'Du måste ange ett lösenord';
-            } elseif (strlen($data['password']) < 6) {
-                $data['passwordErr'] = 'Lösenordet måste innehålla minst 6 tecken';
-            }
-            //Verify username
-            if(empty($data['confirmPassword'])){
-                $data['confirmPasswordErr'] = 'Du måste bekräfta ditt lösenord';
+            //Verify password
+            if(!empty($data['password'])){
+                if (strlen($data['password']) < 6) {
+                    $data['passwordErr'] = 'Lösenordet måste innehålla minst 6 tecken';
+                }
             }
 
-
-            // die($data['isAdmin']);
             //check if user has been set to admin
             if(isset($_POST['isAdmin']) &&
                 $_POST['isAdmin'] == 'true'){
@@ -255,16 +250,30 @@ class Users extends Controller{
                 }
                 
             //Check that passwords match
-            if($data['password'] != $data['confirmPassword']) {
-                $data['confirmPasswordErr'] = 'Lösenorden matchar inte';
+            if(!empty($data['password'])) {
+                if($data['password'] != $data['confirmPassword']) {
+                    $data['confirmPasswordErr'] = 'Lösenorden matchar inte';
+                }
             }
-
 
             //confirm that all errors are empty
             if(empty($data['usernameErr']) && empty($data['firstNameErr']) && empty($data['lastNameErr']) && 
-            empty($data['emailErr']) && empty($data['passwordErr']) && empty($data['confirmPassword'])){
+            empty($data['emailErr']) && empty($data['passwordErr']) && empty($data['confirmPasswordErr'])){
 
-                
+                if(!$this->userModel->editUser($data)){
+                    die('Något gick fel, försök igen senare');
+                }
+
+                if(!empty($data['password'])){
+
+                    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+                    if($this->userModel->editPassword($data)){
+                        redirect('users/showUsers');
+                    }
+                }
+
+                redirect('users/showUsers');                               
 
             } else {
                 //return with errors

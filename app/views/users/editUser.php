@@ -16,7 +16,7 @@
     </div>
     <div class="formBox">
         <label for="firstName">Förnamn: </label>
-        <input class="formField" type="text" name="fistName" value="<?php echo $data['firstName'] ?>">
+        <input class="formField" type="text" name="firstName" value="<?php echo $data['firstName'] ?>">
         <?php if (!empty($data['firstNameErr'])): ?>
             <span class="warning"><?php echo $data['firstNameErr'] ?></span>
         <?php endif;?>
