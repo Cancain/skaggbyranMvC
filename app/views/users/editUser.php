@@ -15,7 +15,7 @@
     </div>
     <div class="formBox">
         <label for="firstName">Förnamn: </label>
-        <input class="formField" type="text" name="fistName" value="<?php echo $data['firstName'] ?>">
+        <input class="formField" type="text" name="firstName" value="<?php echo $data['firstName'] ?>">
         <?php if (!empty($data['firstNameErr'])): ?>
             <span class="warning"><?php echo $data['firstNameErr'] ?></span>
         <?php endif;?>
@@ -50,11 +50,11 @@
     </div>
     <div class="formBox">
         <label>Kan editera</label>
-        <input type="checkbox" name="isAdmin" <?php if($data['isAdmin']) echo 'checked' ?>>
+        <input type="checkbox" name="isAdmin" value="true" <?php if($data['isAdmin']) echo 'checked' ?>>
     </div>
     <div class="formBox">
         <label>Kan ändra användare</label>
-        <input type="checkbox" name="superAdmin" <?php if($data['superAdmin']) echo 'checked' ?>>        
+        <input type="checkbox" name="superAdmin" value="true" <?php if($data['superAdmin']) echo 'checked' ?>>        
     </div>
         <input class="formBtn" type="submit" value="Ändra">
         <input class="formBtn" type="button" value="Gå tillbaka">

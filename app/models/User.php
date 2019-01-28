@@ -72,4 +72,42 @@ class User{
 
         return $data;
     }
+
+    public function editUser($data){
+        //Set up query
+        $this->db->query('UPDATE users
+                            SET userName = :userName, 
+                            firstName = :firstName,
+                            lastName = :lastName,
+                            email = :email,
+                            isAdmin = :isAdmin,
+                            superAdmin = :superAdmin
+                            WHERE id = :id');
+        
+        //Bind values
+        $this->db->bind('userName', $data['userName']);
+        $this->db->bind('firstName', $data['firstName']);
+        $this->db->bind('lastName', $data['lastName']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('isAdmin', $data['isAdmin']);
+        $this->db->bind('superAdmin', $data['superAdmin']);
+        $this->db->bind('id', $data['userId']);
+
+        //Execute query, return true if successfull, false otherwise
+        if($this->db->execute()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function editPassword($data){
+        $this->db->query('UPDATE users
+            SET password = :password
+            WHERE id = :id');
+
+        $this->db->bind('password', $data['password']);
+        $this->db->bind('id', $data['userId']);
+        $this->db->execute();
+    }
 }
