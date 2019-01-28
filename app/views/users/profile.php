@@ -2,7 +2,7 @@
 
 <div class="wrapper">
         <div class="profile">
-        <div>
+        <div class="profileBox">
         <h1><?php echo $data->firstName . ' ' . $data->lastName ?></h1>
         <p class="graySm">Användarnamn: <?php echo $data->userName?></p>
         <p class="graySm">Email: <?php echo $data->email ?></p>
