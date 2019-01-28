@@ -1,5 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'?>
 <div class="wrapper">
+    <div class="centerContent">
 <form action="" method="post">
     <?php flash('addPortfolioSuccess') ?>
 
@@ -26,6 +27,6 @@
     </div>
 
 </form>
-
+</div>
 </div>
 <?php require APPROOT . '/views/inc/footer.php'?>

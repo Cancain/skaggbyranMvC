@@ -369,6 +369,10 @@ img {
       width: 945px;
       min-height: 70vH; } }
 
+.centerContent {
+  margin-left: auto;
+  margin-right: auto; }
+
 /* Top Container */
 @media (min-width: 768px) {
   .top-container {
