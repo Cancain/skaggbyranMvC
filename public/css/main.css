@@ -140,24 +140,16 @@ form {
   align-items: start;
   justify-content: center; }
 
-.profile {
-  display: inline-grid;
+.fullContent {
   background: var(--primary);
   text-decoration: none;
-  padding: 3rem;
+  padding: 1rem 3rem 1rem 3rem;
   box-shadow: var(--shadow);
   margin: 0 0;
   align-items: start;
   justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
   max-width: 945px;
   width: 945px; }
-
-.profileBox {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto; }
 
 .flashSuccess {
   color: white;
@@ -593,6 +585,32 @@ img {
 
 .contentBoxB {
   grid-area: content-box-b; }
+
+.profile {
+  display: inline-grid;
+  background: var(--primary);
+  text-decoration: none;
+  padding: 3rem;
+  box-shadow: var(--shadow);
+  margin: 0 0;
+  align-items: start;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 945px;
+  width: 945px; }
+
+.profileBox {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.userName {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem; }
+
+.grayForm {
+  background-color: #F5F5F5 !important; }
 
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif; }
