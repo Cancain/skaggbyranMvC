@@ -23,10 +23,10 @@
     & .formField {
       border: 0;
       width:80vw;
-      height: 15px;
+      height: 10px;
       border-radius: 3px;
-      padding: 1rem;
-      font-size: 1.3rem;
+      padding: 0.8rem;
+      font-size: 1.1rem;
       background: var(--primary);
       box-shadow: var(--shadow);
       @include tabletUp(){
@@ -38,8 +38,8 @@
       border: 0;
       width:80vw;
       border-radius: 3px;
-      padding: 1rem;
-      font-size: 1.3rem;
+      padding: 0.8rem;
+      font-size: 1.1rem;
       background: var(--primary);
       box-shadow: var(--shadow);
       @include tabletUp(){
