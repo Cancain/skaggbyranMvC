@@ -97,26 +97,19 @@
       justify-content: center;
 
       }
-      .profile {
-        display: inline-grid;
-        background: var(--primary);
-        text-decoration: none;
-        padding: 3rem;
-        box-shadow: var(--shadow);
-        margin: 0 0;
-        align-items: start;
-        justify-content: center;
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 945px;
-        width: 945px;  
-        }
-        .profileBox{
-          margin-left: auto;
-          margin-right:auto;    
-          margin-top: auto;
-          margin-bottom: auto;     
 
-        }
+        .fullContent {
+          background: var(--primary);
+          text-decoration: none;
+          padding: 1rem 3rem 1rem 3rem;
+          box-shadow: var(--shadow);
+          margin: 0 0;
+          align-items: start;
+          justify-content: center;
+          max-width: 945px;
+          width: 945px;  
+          }
+
   
 .flashSuccess{
   color: white;
