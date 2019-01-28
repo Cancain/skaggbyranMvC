@@ -71,6 +71,8 @@ class Users extends Controller{
     public function startUserSession($user){
         $_SESSION['userId'] = $user->id;
         $_SESSION['userName'] = $user->userName;
+        $_SESSION['isAdmin'] = $user->isAdmin;
+        $_SESSION['superAdmin'] = $user->superAdmin;
 
     }
 
@@ -107,11 +109,16 @@ class Users extends Controller{
 
             //Validate email
             if(empty($data['email'])){
-                $data['emailErr'] = 'Du måste ange en korrekt emailadress';
+                $data['emailErr'] = 'Du måste ange en korrekt emailadress'; 
+            } elseif ($this->userModel->getUserByEmail($data['email'])) {
+                $data['emailErr'] = 'Emailadressen är redan registrerad';
             }
+
             //Validate username
             if(empty($data['userName'])){
                 $data['userNameErr'] = 'Du måste ange ett användarnamn';
+            } else if ($this->userModel->getUserByUserName($data['userName'])){
+                $data['userNameErr'] = 'Användarnamet finns redan';
             }
             //Validate password
             if(empty($data['password'])){

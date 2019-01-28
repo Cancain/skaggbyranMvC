@@ -110,4 +110,34 @@ class User{
         $this->db->bind('id', $data['userId']);
         $this->db->execute();
     }
+
+    public function getUserByEmail($email){
+        $this->db->query('SELECT * FROM users
+                        WHERE email = :email');
+        
+        $this->db->bind('email', $email);
+
+        $foundUser = $this->db->single();
+
+        if($foundUser) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function getUserByUserName($userName){
+        $this->db->query('SELECT * FROM users
+                        WHERE userName = :userName');
+        
+        $this->db->bind('userName', $userName);
+
+        $foundUser = $this->db->single();
+
+        if($foundUser) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

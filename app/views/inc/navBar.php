@@ -1,22 +1,8 @@
 <section id="navBgLg">
     <div class="grid">
-
-      <!-- User section -->
-      <!-- <?php if(!$_SESSION): ?>
-      <div class="userBox">
-        <ul id="userMenu">
-          <a href="<?php echo URLROOT?>users/logIn">
-            <li class="navH">logga in</li>
-          </a>
-          <a href="<?php echo URLROOT?>users/register">
-            <li class="navH">Registrera</li>
-          </a>
-        </ul>
-      </div>
-      <?php endif; ?> -->
-
+    <div class="userBox">
       <?php if($_SESSION):?>
-      <div class="userBox">
+      
         <ul id="userMenu">
           <a href="<?php echo URLROOT ?>users/profile">
             <li class="navH"><?php echo $_SESSION['userName']?></li>
@@ -24,12 +10,15 @@
           <a href="<?php echo URLROOT ?>users/logout">
             <li id="logOutBtn" class="navH">Logga ut</li>
           </a>
+      <?php endif; ?>
+          <?php if($_SESSION['isAdmin']): ?>
           <a href="<?php echo URLROOT ?>users/showUsers">
             <li id="logOutBtn" class="navH">Användare</li>
           </a>
         </ul>
+        <?php endif; ?>
       </div>
-      <?php endif; ?>
+      
 
 
       <!-- Logo -->
