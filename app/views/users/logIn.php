@@ -18,7 +18,7 @@
                 <input type="password" class="formField" name="password">
                 <input type="submit" class="formBtn" value="Logga in"><br>
             </div>
-           <p class="reginfo"> <a href="register.php">Har du inget konto? Registrera här</a></p>
+           <p class="reginfo"> <a href="<?php echo URLROOT ?>users/register">Har du inget konto? Registrera här</a></p>
             <?php if(!empty($data['userErr'])):?>
                 <span class="warning"><?php echo $data['userErr'] ?></span>
             <?php endif;?>

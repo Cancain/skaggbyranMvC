@@ -188,7 +188,87 @@ class Users extends Controller{
     }
 
     public function editUser($id){
-        $data = $this->userModel->getUserById($id);
-        $this->view('users/editUser', $data);
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            //Sanitize data
+            $_POST = filter_input_array(input_post, FILTER_SANITIZE_STRING);
+            
+            $data = [
+                'userName' => htmlspecialchars(trim($_POST['userName'])),
+                'firstName' => htmlspecialchars(trim($_POST['firstName'])),
+                'lastName' => htmlspecialchars(trim($_POST['lastName'])),
+                'email' => htmlspecialchars(trim($_POST['email'])),
+                'password' => htmlspecialchars(trim($_POST['password'])),
+                'confirmPassword' => htmlspecialchars(trim($_POST['confirmPassword'])),
+                'isAdmin' => '',
+                'superAdmin' => '',
+                'userNameErr' => '',
+                'firstNameErr' => '',
+                'lastNameErr' => '',
+                'emailErr' => '',
+                'passwordErr' => '',
+                'confirmPasswordErr' => ''
+            ];
+
+            //Verify username
+            if(empty($data['userName'])){
+                $data['userNameErr'] = 'Du måste ange ett användarnamn';
+            }
+            //Verify username
+            if(empty($data['firstName'])){
+                $data['firstNameErr'] = 'Du måste ange ett förnamn';
+            }
+            //Verify username
+            if(empty($data['lastName'])){
+                $data['lastNameErr'] = 'Du måste ange ett efternamn';
+            }
+            //Verify username
+            if(empty($data['email'])){
+                $data['emailErr'] = 'Du måste ange en email';
+            }
+            //Verify username
+            if(empty($data['password'])){
+                $data['passwordErr'] = 'Du måste ange ett lösenord';
+            } elseif (strlen($data['password']) < 6) {
+                $data['passwordErr'] = 'Lösenordet måste innehålla minst 6 tecken';
+            }
+            //Verify username
+            if(empty($data['confirmPassword'])){
+                $data['confirmPasswordErr'] = 'Du måste bekräfta ditt lösenord';
+            }
+
+            //confirm that all errors are empty
+            if(empty($data['usernameErr']) && empty($data['firstNameErr']) && empty($data['lastNameErr']) && 
+            empty($data['emailErr']) && empty($data['passwordErr']) && empty($data['confirmPassword'])){
+
+                die('no errors');
+
+            } else {
+                //return with errors
+                die(var_dump($data));
+                $this->view('users/editUser', $data);
+            }
+
+        } else {
+            $user = $this->userModel->getUserById($id);
+            $data = [
+                'userId' => $user->id,
+                'userName' => $user->userName,
+                'firstName' => $user->firstName,
+                'lastName' => $user->lastName,
+                'email' => $user->email,
+                'password' => $user->email,
+                'isAdmin' => $user->isAdmin,
+                'superAdmin' => $user->superAdmin,
+                'confirmPassword' => '',
+                'userNameErr' => '',
+                'firstNameErr' => '',
+                'lastNameErr' => '',
+                'emailErr' => '',
+                'passwordErr' => '',
+                'confirmPasswordErr' => ''
+            ];
+
+            $this->view('users/editUser', $data);
+        }
     }
 }
