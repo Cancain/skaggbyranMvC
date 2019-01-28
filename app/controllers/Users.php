@@ -190,7 +190,7 @@ class Users extends Controller{
     public function editUser($id){
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             //Sanitize data
-            $_POST = filter_input_array(input_post, FILTER_SANITIZE_STRING);
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             
             $data = [
                 'userName' => htmlspecialchars(trim($_POST['userName'])),
@@ -236,11 +236,35 @@ class Users extends Controller{
                 $data['confirmPasswordErr'] = 'Du måste bekräfta ditt lösenord';
             }
 
+
+            // die($data['isAdmin']);
+            //check if user has been set to admin
+            if(isset($_POST['isAdmin']) &&
+                $_POST['isAdmin'] == 'true'){
+                    $data['isAdmin'] = true;
+                } else {
+                    $data['isAdmin'] = false;
+                }
+
+            //check if user has been set to admin
+            if(isset($_POST['superAdmin']) &&
+                $_POST['superAdmin'] == 'true'){
+                    $data['superAdmin'] = true;
+                } else {
+                    $data['superAdmin'] = false;
+                }
+                
+            //Check that passwords match
+            if($data['password'] != $data['confirmPassword']) {
+                $data['confirmPasswordErr'] = 'Lösenorden matchar inte';
+            }
+
+
             //confirm that all errors are empty
             if(empty($data['usernameErr']) && empty($data['firstNameErr']) && empty($data['lastNameErr']) && 
             empty($data['emailErr']) && empty($data['passwordErr']) && empty($data['confirmPassword'])){
 
-                die('no errors');
+                
 
             } else {
                 //return with errors
