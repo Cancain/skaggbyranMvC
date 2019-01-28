@@ -1,8 +1,7 @@
 <?php require APPROOT . '/views/inc/header.php'?>
-
 <div class="wrapper">
     <div class="fullContent">
-<form action="" method="post">
+    <form class="centerContent" action="" method="post">
     <div class="formBox">
         <label for="userName">Användar-id: </label>
         <input class="grayForm formField" type="text" name="userId" readonly value="<?php echo $data['userId'] ?>">       
