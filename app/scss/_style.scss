@@ -51,6 +51,14 @@ img{
     max-width: 100%;
 }
 
+.mainTitle{
+    text-shadow:
+    -1px -1px 0 $secondaryTextColor,
+    1px -1px 0 $secondaryTextColor,
+    -1px 1px 0 $secondaryTextColor,
+    1px 1px 0 $secondaryTextColor,
+}
+
 .gray {
     font-size: 1.2rem;
     margin-top: 0;

@@ -57,7 +57,7 @@
         <input type="checkbox" name="superAdmin" value="true" <?php if($data['superAdmin']) echo 'checked' ?>>        
     </div>
         <input class="formBtn" type="submit" value="Ändra">
-        <input class="formBtn" type="button" value="Gå tillbaka">
+        <input class="formBtn" type="button" value="Gå tillbaka"><br><br>
 </form>
 </div>
 </div>
