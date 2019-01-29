@@ -4,7 +4,7 @@
       <!-- Top Container -->
       <section class="top-container">
         <header class="showcase">
-          <h1>Välkommen till Skäggbyrån i Gävle</h1>
+          <h1 class="mainTitle">Välkommen till Skäggbyrån i Gävle</h1>
           <p>
             Vi levererar helhetslösningar för moderna hemsidor med stor variation av innehåll, som skräddarsydda filmer, illustrationer, smarta funktioner och effektiv design. Vi klarar det för att vi är en bred webbyrå.
           </p>
