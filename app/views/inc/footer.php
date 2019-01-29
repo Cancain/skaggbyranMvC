@@ -7,7 +7,6 @@
 
 <script src="<?php echo URLROOT; ?>js/navbar.js"></script>
 <script src="<?php echo URLROOT; ?>js/logout.js"></script>
-<script src="<?php echo URLROOT; ?>js/calendar.js"></script>
 <script>
     // Initialize and add the map
     function initMap() {

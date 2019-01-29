@@ -43,7 +43,7 @@
       <?php endif; ?>
       </div>
       <!-- <script src="../node_modules/js-datepicker/dist/datepicker.min.js"></script> -->
-      <!-- <script src="./js/calendar.js"></script> -->
+      <script src="./js/calendar.js"></script>
     </form>
   </div>
 </div>
@@ -52,6 +52,9 @@
 
 
 </div>
+
+<script src="<?php APPROOT ?>../node_modules/js-datepicker/dist/datepicker.min.js"></script>
+<script src="<?php echo URLROOT; ?>js/calendar.js"></script>
 
 <?php require APPROOT . '/views/inc/footer.php'?>
 
