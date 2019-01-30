@@ -1,8 +1,8 @@
 <?php require APPROOT . '/views/inc/header.php'?>
 
 <div class="wrapper">
-    <div class="fullContent">
-        <div class="centerContent">
+    <div class="fullContent pt">
+        <div class="centerContent pb">
     <?php foreach ($data as $user): ?>
     <?php if ($_SESSION['superAdmin']): ?>
         <a href="<?php echo URLROOT ?>users/editUser/<?php echo $user->id ?>"> <h3 class="userName"><?php echo $user->userName ?></h3></a>

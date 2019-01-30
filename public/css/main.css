@@ -146,9 +146,11 @@ form {
   box-shadow: var(--shadow);
   margin: 0 0 0 0;
   align-items: center;
-  justify-content: center;
-  max-width: 945px;
-  width: 945px; }
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .fullContent {
+      max-width: 945px;
+      width: 945px; } }
 
 .flashSuccess {
   color: white;
@@ -324,6 +326,22 @@ body a:hover {
 @media (min-width: 768px) {
   .hideonLg {
     display: none; } }
+
+@media (max-width: 768px) {
+  .mt {
+    margin: 1rem 0 0 0; } }
+
+@media (max-width: 768px) {
+  .mb {
+    margin: 0 0 1rem 0; } }
+
+@media (max-width: 768px) {
+  .pt {
+    padding: 1rem 0 0 0; } }
+
+@media (max-width: 768px) {
+  .pb {
+    padding: 0 0 2rem 0; } }
 
 .btn {
   background: #386789;
@@ -619,10 +637,12 @@ img {
   box-shadow: var(--shadow);
   margin: 0 0;
   align-items: start;
-  justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 945px !important;
-  width: 945px; }
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .profile {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 945px !important;
+      width: 945px; } }
 
 .profileBox {
   margin-left: auto;
@@ -634,6 +654,10 @@ img {
 .userName {
   margin-top: 2rem;
   margin-bottom: 0.5rem; }
+
+@media (max-width: 768px) {
+  .currentUser {
+    font-size: 1rem !important; } }
 
 .grayForm {
   background-color: #F5F5F5 !important; }

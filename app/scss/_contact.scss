@@ -105,8 +105,10 @@
           margin: 0 0 0 0;
           align-items: center;
           justify-content: center;
+          @include tabletUp{
           max-width: 945px;
           width: 945px;
+          }
           }
 
   

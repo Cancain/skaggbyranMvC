@@ -45,6 +45,27 @@ body a:hover {
         display: none;
     }
 }
+
+.mt {
+    @include tabletDown{
+        margin: 1rem 0 0 0;
+      }
+}
+.mb {
+    @include tabletDown{
+        margin: 0 0 1rem 0;
+      }
+}
+.pt {
+    @include tabletDown{
+        padding: 1rem 0 0 0;
+      }
+}
+.pb {
+    @include tabletDown{
+        padding: 0 0 2rem 0;
+      }
+}
 .btn {
     background: $secondaryTextColor;
     color: var(--light);

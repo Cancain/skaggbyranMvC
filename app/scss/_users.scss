@@ -7,10 +7,12 @@
     margin: 0 0;
     align-items: start;
     justify-content: center;
+    @include tabletUp{
     grid-template-columns: repeat(2, 1fr);
     max-width: 945px !important;
     width: 945px;  
     }
+  } 
     .profileBox{
       margin-left: auto;
       margin-right:auto;    
@@ -24,6 +26,12 @@
       margin-bottom: 0.5rem;
     }
 
+    .currentUser{
+      @include tabletDown {
+        font-size: 1rem !important;
+      }
+
+}
     .grayForm{
         background-color: #F5F5F5 !important;
     }

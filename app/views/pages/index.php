@@ -1,8 +1,10 @@
 <?php require APPROOT . '/views/inc/header.php'?>
 <div class="wrapper">
-  <?php flash('loginSuccess'); ?>
+<div class="centerContent mt"><?php flash('loginSuccess'); ?></div>
+
       <!-- Top Container -->
       <section class="top-container">
+
         <header class="showcase">
           <h1 class="mainTitle">Välkommen till Skäggbyrån i Gävle</h1>
           <p>

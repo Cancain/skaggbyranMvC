@@ -3,7 +3,7 @@
 <div class="wrapper">
         <div class="profile">
         <div>
-        <h1><?php echo $data->firstName . ' ' . $data->lastName ?></h1>
+        <h3 class="currentUser"><?php echo $data->firstName . ' ' . $data->lastName ?></h3>
         <p class="graySm">Användarnamn: <?php echo $data->userName?></p>
         <p class="graySm">Email: <?php echo $data->email ?></p>
         </div>
@@ -12,6 +12,5 @@
         </div>
     </div>
 </div>
-
 
 <?php require APPROOT . '/views/inc/footer.php'?>
