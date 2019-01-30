@@ -9,7 +9,7 @@
 <?php foreach ($data['portfolio'] as $post): ?>
 
  
-<section class="content-container">
+<section class="portfolioContainer">
     <header class="content">
         <h1><?php echo utf8_encode($post->title); ?></h1>
        <p class="smaller"><?php echo utf8_encode($post->createdAt); ?></p>
