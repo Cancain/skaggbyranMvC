@@ -13,7 +13,7 @@
         <div class="top-box top-box-a">
           <h4>Här finns vi!</h4>
           <p class="bigger">Gävle</p>
-          <a href="" class="btn">Hitta hit!</a>
+          <a target="_blank" href="https://www.google.com/maps/place/Atlasgatan+8,+802+86+G%C3%A4vle/@60.6777403,17.1761226,19z/data=!3m1!4b1!4m5!3m4!1s0x4660c68f3b24d4bb:0x38951b3d8d50f24c!8m2!3d60.6777403!4d17.1766698" class="btn">Hitta hit!</a>
         </div>
         <div class="top-box top-box-b">
           <h4>Följ oss!</h4>
@@ -50,14 +50,14 @@
         <img src="<?php echo URLROOT ?>img/code1.jpeg" alt="">
           </div>
         <!-- <div class="box"> -->
-          <a href="portfolio.php" class="box"><i class="fas fa-archive fa-4x"></i>
+          <a href="<?php echo URLROOT ?>portfolios/portfolio" class="box"><i class="fas fa-archive fa-4x"></i>
           <p class="desc">Projekt</p></a>
         <!-- </div> -->
         <div class="boximg">
           <img src="<?php echo URLROOT ?>img/code2.jpeg" alt="">
             </div>
         <!-- <div class="box"> -->
-          <a href="about.php" class="box"><i class="fas fa-info-circle fa-4x"></i>
+          <a href="<?php echo URLROOT ?>pages/about" class="box"><i class="fas fa-info-circle fa-4x"></i>
           <p class="desc">Om oss</p></a>
         <!-- </div> -->
         <div class="boximg">
