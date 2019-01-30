@@ -637,7 +637,8 @@ img {
   box-shadow: var(--shadow);
   margin: 0 0;
   align-items: start;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%; }
   @media (min-width: 768px) {
     .profile {
       grid-template-columns: repeat(2, 1fr);
@@ -657,7 +658,7 @@ img {
 
 @media (max-width: 768px) {
   .currentUser {
-    font-size: 1rem !important; } }
+    font-size: 1.5rem !important; } }
 
 .grayForm {
   background-color: #F5F5F5 !important; }
