@@ -34,6 +34,17 @@ body a:hover {
     @include easeOut();
 }
 
+.hideonSm{
+    @include tabletDown{
+        display: none;
+    }
+}
+
+.hideonLg{
+    @include tabletUp{
+        display: none;
+    }
+}
 .btn {
     background: $secondaryTextColor;
     color: var(--light);
@@ -76,6 +87,11 @@ img{
     margin-top: 0;
     color: $contentText;
  }
+
+ .right {
+    margin-left: auto;
+    margin-right: 0;
+}
 .wrapper {
     grid-gap: 20px;
     padding: 0 0;
@@ -93,6 +109,9 @@ img{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    @include tabletDown{
+        margin-bottom: 1rem;    
+    }
 }
 
 /* Top Container */

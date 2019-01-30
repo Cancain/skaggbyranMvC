@@ -317,6 +317,14 @@ body a:hover {
   color: #c7d8e4;
   transition: all 0.5s ease-out; }
 
+@media (max-width: 768px) {
+  .hideonSm {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .hideonLg {
+    display: none; } }
+
 .btn {
   background: #386789;
   color: var(--light);
@@ -351,6 +359,10 @@ img {
   margin-top: 0;
   color: #747474; }
 
+.right {
+  margin-left: auto;
+  margin-right: 0; }
+
 .wrapper {
   grid-gap: 20px;
   padding: 0 0; }
@@ -367,6 +379,9 @@ img {
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
+  @media (max-width: 768px) {
+    .centerContent {
+      margin-bottom: 1rem; } }
 
 /* Top Container */
 @media (min-width: 768px) {
