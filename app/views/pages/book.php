@@ -16,7 +16,7 @@
   <form action="" autocomplete="off" method="POST">
       <div class="formBox">
         <label for="">Namn</label><br />
-        <input class="formField" type="text" name="name" id="" 
+        <input class="formField" type="text" name="name"
         value="<?php echo $data['name']?>" />
       </div>
 
@@ -28,7 +28,7 @@
 
       <div class="formBox">
         <label for="">Email</label><br />
-        <input class="formField" type="email" name="email" id="" 
+        <input class="formField" type="email" name="email"
         value="<?php echo $data['email']?>"/>
       </div>
 
@@ -42,18 +42,13 @@
       <span class="warning"><?php echo $data['errMsg'] ?></span>      
       <?php endif; ?>
       </div>
-      <!-- <script src="../node_modules/js-datepicker/dist/datepicker.min.js"></script> -->
-      <script src="./js/calendar.js"></script>
     </form>
   </div>
 </div>
   </div>
 </div>
-
-
 </div>
-
-<script src="<?php APPROOT ?>../node_modules/js-datepicker/dist/datepicker.min.js"></script>
+<script src='<?php echo URLROOT ?>js/js-datepicker/dist/datepicker.min.js'></script>
 <script src="<?php echo URLROOT; ?>js/calendar.js"></script>
 
 <?php require APPROOT . '/views/inc/footer.php'?>
