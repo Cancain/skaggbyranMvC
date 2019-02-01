@@ -7,9 +7,20 @@ const contactBtnLg = document.getElementById("contactBtnLg");
 const dropDownMenuContactLg = document.getElementById("dropDownMenuContact");
 const contactBtnSm = document.getElementById("contactBtnSm");
 const dropDownMenuContactSm = document.getElementById("dropDownMenuContactSm");
+const userBtnSm = document.getElementById("userBtnSm");
+const dropDownMenuUserSm = document.getElementById("dropDownMenuUserSm")
 
 //script variables
 let hambPressed = false;
+
+userBtnSm.addEventListener("click", () => {
+  console.log('click');
+  if (dropDownMenuUserSm.classList.contains("hidden")) {
+    dropDownMenuUserSm.classList.remove('hidden');
+  } else {
+    dropDownMenuUserSm.classList.add('hidden');
+  }
+})
 
 contactBtnSm.addEventListener("click", () => {
   if (dropDownMenuContactSm.classList.contains("hidden")) {
@@ -93,9 +104,9 @@ function closeMenu() {
 
 function updateIcon() {
   if (hambPressed === true) {
-    icon.src = "./img/1x/HambMenuPressed.png";
+    icon.src = "../img/1x/HambMenuPressed.png";
   } else {
-    icon.src = "./img/1x/HambMenu.png";
+    icon.src = "../img/1x/HambMenu.png";
   }
 }
 
