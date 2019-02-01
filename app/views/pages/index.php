@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php'?>
 <div class="wrapper">
-<div class="centerContent mt"><?php flash('loginSuccess'); ?></div>
+<?php flash('loginSuccess'); ?>
 
       <!-- Top Container -->
       <section class="top-container">

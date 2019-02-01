@@ -8,7 +8,7 @@
   @media (min-width: 768px) {
     .grid {
       grid-template-columns: 0.4fr 0.6fr 1.5fr 0.5fr;
-      padding-top: 1rem;
+      margin-bottom: 1rem;
       grid-template-rows: 20px 100px; } }
 
 .box1 {
@@ -24,7 +24,8 @@
   grid-row: 2; }
   @media (min-width: 768px) {
     .box2 {
-      grid-column: 3/5; } }
+      grid-column: 3/5;
+      padding-top: 1rem; } }
 
 .userBox {
   display: none; }
@@ -153,9 +154,14 @@ form {
       width: 945px; } }
 
 .flashSuccess {
+  display: table;
   color: white;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 .reginfo {
   padding-top: 10px;
@@ -390,8 +396,7 @@ img {
       margin-left: auto;
       margin-right: auto;
       margin-top: 150px;
-      width: 945px;
-      min-height: 70vH; } }
+      width: 945px; } }
 
 .centerContent {
   margin-left: auto;
@@ -410,7 +415,7 @@ img {
     width: 945px;
     margin-left: 0 0;
     margin-right: 0 0;
-    grid-template-areas: 'showcase showcase top-box-a' 'showcase showcase top-box-b'; } }
+    grid-template-areas: 'showcase showcase top-box-a' 'showcase showcase top-box-b'; } }
 
 /*  Showcase */
 .showcase {
@@ -528,7 +533,7 @@ img {
 /* Media Queries */
 @media (max-width: 768px) {
   .top-container {
-    grid-template-areas: 'showcase showcase' 'top-box-a top-box-b'; }
+    grid-template-areas: 'showcase showcase' 'top-box-a top-box-b'; }
   .showcase h1 {
     font-size: 2.5rem; }
   .boxes {
@@ -536,7 +541,7 @@ img {
 
 @media (max-width: 500px) {
   .top-container {
-    grid-template-areas: 'showcase' 'top-box-a'  'top-box-b'; }
+    grid-template-areas: 'showcase' 'top-box-a'  'top-box-b'; }
   .hide {
     display: none; }
   .boxes {
@@ -584,7 +589,7 @@ img {
     width: 945px;
     margin-left: 0 0;
     margin-right: 0 0;
-    grid-template-areas: 'content content' 'content-box-a content-box-b'; } }
+    grid-template-areas: 'content content' 'content-box-a content-box-b'; } }
 
 @media (min-width: 768px) {
   .portfolioContent {
@@ -593,7 +598,7 @@ img {
     width: 945px;
     margin-left: 0 0;
     margin-right: 0 0;
-    grid-template-areas: 'content content' 'content-box-a content-box-b'; } }
+    grid-template-areas: 'content content' 'content-box-a content-box-b'; } }
 
 .content {
   grid-area: content;
