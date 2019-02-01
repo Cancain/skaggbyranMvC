@@ -15,7 +15,7 @@
             </div>
             <div class="formBox">
                 <label for="password">Lösenord</label><br>
-                <input type="password" class="formField" name="password">
+                <input type="password" class="formField" name="password"><br>
                 <input type="submit" class="formBtn" value="Logga in"><br>
             </div>
            <p class="reginfo"> <a href="<?php echo URLROOT ?>users/register">Har du inget konto? Registrera här</a></p>
