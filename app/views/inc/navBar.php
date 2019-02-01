@@ -69,6 +69,15 @@
             <li class="subItem"><span class="subText">Registrera</span></li>
           </a>
         </ul>
+        <?php else: ?>
+        <ul class="subMenu">
+          <a href="<?php echo URLROOT?>users/profile">
+            <li class="subItem"><span class="subText">Din profil</span></li>
+          </a>
+          <a href="<?php echo URLROOT?>users/logout">
+            <li class="subItem"><span class="subText">Logga ut</span></li>
+          </a>
+        </ul>
         <?php endif; ?>
       </div>
       <a href="<?php echo URLROOT?>pages/about">
