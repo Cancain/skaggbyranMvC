@@ -77,7 +77,7 @@
   .contactBg {
     @include tabletUp(){
        
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 25vw 20vw;
     max-width: 945px;
     width: 945px;
      }

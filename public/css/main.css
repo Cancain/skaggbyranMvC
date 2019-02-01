@@ -128,7 +128,7 @@ form {
   max-width: 100vw; }
   @media (min-width: 768px) {
     .contactBg {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 25vw 20vw;
       max-width: 945px;
       width: 945px; } }
 
@@ -345,9 +345,8 @@ body a:hover {
   .pt {
     padding: 1rem 0 0 0; } }
 
-@media (max-width: 768px) {
-  .pb {
-    padding: 0 0 2rem 0; } }
+.pb {
+  padding: 0 0 2rem 0; }
 
 .btn {
   background: #386789;
@@ -646,6 +645,7 @@ img {
   width: 100%; }
   @media (min-width: 768px) {
     .profile {
+      min-height: 60vH;
       grid-template-columns: repeat(2, 1fr);
       max-width: 945px !important;
       width: 945px; } }

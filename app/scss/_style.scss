@@ -62,9 +62,8 @@ body a:hover {
       }
 }
 .pb {
-    @include tabletDown{
         padding: 0 0 2rem 0;
-      }
+      
 }
 .btn {
     background: $secondaryTextColor;
