@@ -75,7 +75,7 @@ form {
         text-align: start; } }
   form .formField {
     border: 0;
-    width: 80vw;
+    width: 30vw;
     height: 10px;
     border-radius: 3px;
     padding: 0.8rem;
@@ -84,7 +84,7 @@ form {
     box-shadow: var(--shadow); }
     @media (min-width: 768px) {
       form .formField {
-        width: 30vw; } }
+        width: 20vw; } }
   form .formMsg {
     border: 0;
     width: 80vw;
@@ -95,7 +95,7 @@ form {
     box-shadow: var(--shadow); }
     @media (min-width: 768px) {
       form .formMsg {
-        width: 30vw; } }
+        width: 20vw; } }
 
 .formBtn {
   border: 0;
