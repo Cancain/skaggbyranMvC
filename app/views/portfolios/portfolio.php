@@ -23,10 +23,6 @@
 </div>
 
 <?php endif; ?>
-<<<<<<< HEAD
-=======
-
->>>>>>> 61fd3842fba1b51b9b7c8ede136b9b4ae8c0fb5d
 </header>
 </section>
 
