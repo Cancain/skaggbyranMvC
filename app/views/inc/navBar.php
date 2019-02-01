@@ -18,12 +18,9 @@
         </ul>
         <?php endif; ?>
       </div>
-      
-
 
       <!-- Logo -->
       <div class="box1"><a href="<?php echo URLROOT?>pages/index"><img id="logo" src="<?php echo URLROOT; ?>/img/1x/logo.png" alt="" /></a></div>
-
 
       <!-- Menu for large screens -->
       <div class="box2">
@@ -61,6 +58,19 @@
       <a href="index.php">
         <li id="homeBtnSm" class="navV">Hem</li>
       </a>
+      <li id="userBtnSm" class="">Användare</li>
+      <div id="dropDownMenuUserSm" class="hidden">
+        <?php if(!$_SESSION): ?>
+        <ul class="subMenu">
+          <a href="<?php echo URLROOT?>users/login">
+            <li class="subItem"><span class="subText">Logga in</span></li>
+          </a>
+          <a href="<?php echo URLROOT?>users/register">
+            <li class="subItem"><span class="subText">Registrera</span></li>
+          </a>
+        </ul>
+        <?php endif; ?>
+      </div>
       <a href="<?php echo URLROOT?>pages/about">
         <li id="aboutBtnSm" class="navV">Om Oss</li>
       </a>
@@ -70,7 +80,7 @@
           <a href="<?php echo URLROOT?>pages/book">
             <li class="subItem"><span class="subText">Boka tid</span></li>
           </a>
-          <a href="contact.php">
+          <a href="<?php echo URLROOT?>users/login">
             <li class="subItem"><span class="subText">Skicka meddelande</span></li>
           </a>
         </ul>
@@ -92,6 +102,7 @@
       </a>
       <a href="<?php echo URLROOT?>pages/contact">
         <li>Skicka meddelande</li>
-      </a>
+      </a></header>
+</section>
     </ul>
   </div>

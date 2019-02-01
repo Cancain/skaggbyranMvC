@@ -5,7 +5,7 @@
     <p><a href="mailto:lena.unden@skaggbyran.se">lena.unden@skaggbyran.se</a></p>
 </div>
 
-<script src="<?php echo URLROOT; ?>js/navbar.js"></script>
+<script src="<?php echo URLROOT; ?>js/navBar.js"></script>
 </body>
 
 </html>

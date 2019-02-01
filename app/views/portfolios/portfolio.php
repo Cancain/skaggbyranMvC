@@ -23,9 +23,11 @@
 </div>
 
 <?php endif; ?>
-    </header>
 
+</header>
 </section>
+
+
 
 <?php endforeach; ?>
 </div>
