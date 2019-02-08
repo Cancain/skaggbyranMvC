@@ -7,6 +7,7 @@
 <div class="centerContent hideonLg"><a href="<?php echo URLROOT?>portfolios/add/"><button class="formBtn">Lägg till</button></a></div>
 
 <?php endif; ?>
+<?php flash('addPortfolioSuccess') ?>
 
 <?php foreach ($data['portfolio'] as $post): ?>
 
@@ -17,6 +18,7 @@
        <p class="smaller"><?php echo utf8_encode($post->createdAt); ?></p>
         <p><?php echo utf8_encode($post->body); ?></p>
         <?php if($data['user'] && $data['user']->isAdmin): ?>
+        
 <div class="right">
 <a href="<?php echo URLROOT?>portfolios/edit/<?php echo $post->id ?>"><button class="formBtn">Ändra</button></a>
 <a href="<?php echo URLROOT?>portfolios/remove/<?php echo $post->id ?>"><button class="formBtn">Ta bort</button></a>

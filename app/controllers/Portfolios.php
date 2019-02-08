@@ -49,7 +49,7 @@ class Portfolios extends Controller{
             if(empty($data['titleErr']) && empty($data['bodyErr'])){
                 $this->portfolioModel->add($data);
                 flash('addPortfolioSuccess', 'Portfolio tillagd');
-                redirect('portfolios/add');
+                redirect('portfolios/portfolio');
             } else {
                 $this->view('portfolios/addPortfolio', $data);
             }

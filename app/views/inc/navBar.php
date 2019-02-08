@@ -11,7 +11,7 @@
             <li id="logOutBtn" class="navH">Logga ut</li>
           </a>
       <?php endif; ?>
-          <?php if($_SESSION['isAdmin']): ?>
+          <?php if($_SESSION['superAdmin']): ?>
           <a href="<?php echo URLROOT ?>users/showUsers">
             <li id="logOutBtn" class="navH">Användare</li>
           </a>
@@ -73,6 +73,10 @@
         <ul class="subMenu">
           <a href="<?php echo URLROOT?>users/profile">
             <li class="subItem"><span class="subText">Din profil</span></li>
+        <?php if($_SESSION['superAdmin']): ?>
+        <a href="<?php echo URLROOT?>users/showUsers">
+            <li class="subItem"><span class="subText">Användare</span></li>
+        <?php endif; ?>
           </a>
           <a href="<?php echo URLROOT?>users/logout">
             <li class="subItem"><span class="subText">Logga ut</span></li>
