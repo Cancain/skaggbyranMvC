@@ -10,7 +10,8 @@
           <p>
             Vi levererar helhetslösningar för moderna hemsidor med stor variation av innehåll, som skräddarsydda filmer, illustrationer, smarta funktioner och effektiv design. Vi klarar det för att vi är en bred webbyrå.
           </p>
-          <a href="#" class="btn">Läs Mer</a>
+          
+          <a href="<?php echo URLROOT?>pages/about" class="btn">Läs Mer</a>
         </header>
         <div class="top-box top-box-a">
           <h4>Här finns vi!</h4>
