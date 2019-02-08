@@ -2,8 +2,6 @@
 <div class="wrapper">
      <div class="centerContent">
 <form action="" method="post">
-    <?php flash('addPortfolioSuccess') ?>
-
 
     <div class="formBox">
         <label for="title">Title</label><br>

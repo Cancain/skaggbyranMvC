@@ -11,7 +11,7 @@
             <li id="logOutBtn" class="navH">Logga ut</li>
           </a>
       <?php endif; ?>
-          <?php if($_SESSION['isAdmin']): ?>
+          <?php if($_SESSION['superAdmin']): ?>
           <a href="<?php echo URLROOT ?>users/showUsers">
             <li id="logOutBtn" class="navH">Användare</li>
           </a>
