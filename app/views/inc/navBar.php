@@ -73,6 +73,10 @@
         <ul class="subMenu">
           <a href="<?php echo URLROOT?>users/profile">
             <li class="subItem"><span class="subText">Din profil</span></li>
+        <?php if($_SESSION['superAdmin']): ?>
+        <a href="<?php echo URLROOT?>users/showUsers">
+            <li class="subItem"><span class="subText">Användare</span></li>
+        <?php endif; ?>
           </a>
           <a href="<?php echo URLROOT?>users/logout">
             <li class="subItem"><span class="subText">Logga ut</span></li>
