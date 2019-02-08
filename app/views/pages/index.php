@@ -10,12 +10,13 @@
           <p>
             Vi levererar helhetslösningar för moderna hemsidor med stor variation av innehåll, som skräddarsydda filmer, illustrationer, smarta funktioner och effektiv design. Vi klarar det för att vi är en bred webbyrå.
           </p>
-          <a href="#" class="btn">Läs Mer</a>
+          
+          <a href="<?php echo URLROOT?>pages/about" class="btn">Läs Mer</a>
         </header>
         <div class="top-box top-box-a">
           <h4>Här finns vi!</h4>
           <p class="bigger">Gävle</p>
-          <a target="_blank" href="https://www.google.com/maps/place/Atlasgatan+8,+802+86+G%C3%A4vle/@60.6777403,17.1761226,19z/data=!3m1!4b1!4m5!3m4!1s0x4660c68f3b24d4bb:0x38951b3d8d50f24c!8m2!3d60.6777403!4d17.1766698" class="btn">Hitta hit!</a>
+          <a target="_blank" href="https://goo.gl/maps/mrr7WfCctpK2" class="btn">Hitta hit!</a>
         </div>
         <div class="top-box top-box-b">
           <h4>Följ oss!</h4>

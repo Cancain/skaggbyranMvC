@@ -20,7 +20,7 @@
       </div>
 
       <!-- Logo -->
-      <div class="box1"><a href="<?php echo URLROOT?>pages/index"><img id="logo" src="<?php echo URLROOT; ?>/img/1x/logo.png" alt="" /></a></div>
+      <div class="box1"><a href="<?php echo URLROOT?>pages/index"><img id="logo" src="<?php echo URLROOT; ?>/img/1x/logo2.png" alt="" /></a></div>
 
       <!-- Menu for large screens -->
       <div class="box2">
@@ -93,7 +93,7 @@
           <a href="<?php echo URLROOT?>pages/book">
             <li class="subItem"><span class="subText">Boka tid</span></li>
           </a>
-          <a href="<?php echo URLROOT?>users/login">
+          <a href="<?php echo URLROOT?>pages/contact">
             <li class="subItem"><span class="subText">Skicka meddelande</span></li>
           </a>
         </ul>

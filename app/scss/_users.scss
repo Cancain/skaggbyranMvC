@@ -9,9 +9,10 @@
     justify-content: center;
     width: 100%;
     @include tabletUp{
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 945px !important;
-    width: 945px;  
+      min-height: 60vH;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 945px !important;
+      width: 945px;  
     }
   } 
     .profileBox{

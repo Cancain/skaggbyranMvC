@@ -4,7 +4,7 @@
 <form action="" method="post">
     <?php flash('addPortfolioSuccess') ?>
     <div class="formBox formCenter">
-        <label for="title">Title</label>
+        <label for="title">Title</label><br>
         <input class="formField" type="text" name="title" value="<?php echo $data['title'] ?>">
 
         <?php if($data['titleErr']): ?>
@@ -14,8 +14,8 @@
     </div>
 
     <div class="formBox">
-        <label for="body">Content</label>
-        <textarea class="formMsg" name="body" id="" cols="30" rows="10"><?php echo $data['body'] ?></textarea>
+        <label for="body">Content</label><br>
+        <textarea class="formMsg" name="body" id="" cols="30" rows="10"><?php echo $data['body'] ?></textarea><br>
         <input class="formBtn" type="submit" value="Ändra">
 
         <?php if($data['bodyErr']): ?>
