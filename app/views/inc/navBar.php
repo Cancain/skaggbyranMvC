@@ -89,7 +89,7 @@
           <a href="<?php echo URLROOT?>pages/book">
             <li class="subItem"><span class="subText">Boka tid</span></li>
           </a>
-          <a href="<?php echo URLROOT?>users/login">
+          <a href="<?php echo URLROOT?>pages/contact">
             <li class="subItem"><span class="subText">Skicka meddelande</span></li>
           </a>
         </ul>
