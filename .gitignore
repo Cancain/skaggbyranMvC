@@ -1,4 +1,8 @@
+*.htaccess
+
 node_modules
 ToDo
 config.php
-public/.htaccess
+
+
+

@@ -140,9 +140,11 @@ class Pages extends Controller{
                 if(mail($toEmail, $subject, $body, $headers)){
                     //if mail succeds
                     $data['errMsg'] = 'Bokningsönskan skickad';
+                    $this->view('pages/book', $data);
                 } else {
                     //if mail fails
                     $data['errMsg'] = 'Något gick fel, försök igen senare';
+                    $this->view('pages/book', $data);
                 }
             } else {
                 //Get back to the bookpage with errors
