@@ -14,6 +14,12 @@ inom IT och Medieproduktion.
 Vi arbetar inom en kooperativ struktur med tydliga mål där alla är medvetna om vad de har för förväntningar på sig själva och varandra.
 
 Vi har kontinuerlig dialog mellan ledare och medarbetare om vilka projekt de ska engagera sig i och hur.</p>
+
+<?php if($data['currentUser'] && $data['currentUser']->isAdmin): ?>
+
+<a href="<?php echo URLROOT?>pages/editText">Redigera text</a>
+
+<?php endif; ?>
           
         </header>
         <div class="contentBox contentBoxA">
@@ -21,11 +27,26 @@ Vi har kontinuerlig dialog mellan ledare och medarbetare om vilka projekt de ska
 hjälpa arbetstränaren på arbetsplatsen.
 Arbetsförmedlingens representant gör 
 en individuell överenskommelse med Skäggbyråns handledare och den arbetssökande.</p>
+
+<?php if($data['currentUser'] && $data['currentUser']->isAdmin): ?>
+
+<a href="">Redigera text</a>
+
+<?php endif; ?>
         </div>
         <div class="contentBox contentBoxB">
           <p>I överenskommelsen ska det bland annat stå vilket stöd den arbetssökande behöver, vilka arbetstider och arbetsuppgifter som är aktuella samt hur länge den arbetssökande ska delta i arbetsträningen.
 Skäggbyrån ser också till att arbetsmiljön är god och att arbetsträningen är anpassad efter den arbetssökandes särskilda förutsättningar och mål.</p>
+
+<?php if($data['currentUser'] && $data['currentUser']->isAdmin): ?>
+
+<a href="">Redigera text</a>
+
+<?php endif; ?>
+
         </div>
+
+        
       </section>
 
 

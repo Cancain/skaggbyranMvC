@@ -14,11 +14,14 @@ class Pages extends Controller{
     }
 
     public function arbetstraning(){
-        $this->view('pages/arbetstraning');
+        $data = [
+            'currentUser' => $this->userModel->getUserById($_SESSION['userId']),
+        ];
+        $this->view('pages/arbetstraning', $data);
     }
 
     public function contact(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
             //Sanitize data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
@@ -85,7 +88,7 @@ class Pages extends Controller{
 }
 
     public function book(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
             //Sanitize data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
@@ -161,5 +164,9 @@ class Pages extends Controller{
             ];
             $this->view('pages/book', $data);
         }        
+    }
+
+    public function editText() {
+        $this->view('pages/editText');
     }
 }
