@@ -71,8 +71,6 @@ class Users extends Controller{
     public function startUserSession($user){
         $_SESSION['userId'] = $user->id;
         $_SESSION['userName'] = $user->userName;
-        $_SESSION['isAdmin'] = $user->isAdmin;
-        $_SESSION['superAdmin'] = $user->superAdmin;
 
     }
 
@@ -190,7 +188,10 @@ class Users extends Controller{
     }
 
     public function showUsers(){
-        $data = $this->userModel->getAllUsers();
+        $data = [
+            'users' => $this->userModel->getAllUsers(),
+            'currentUser' => $this->userModel->getUserById($_SESSION['userId'])
+        ];
         $this->view('users/showUsers', $data);
     }
 

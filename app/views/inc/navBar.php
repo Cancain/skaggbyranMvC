@@ -10,13 +10,10 @@
           <a href="<?php echo URLROOT ?>users/logout">
             <li id="logOutBtn" class="navH">Logga ut</li>
           </a>
+          </ul>
       <?php endif; ?>
-          <?php if($_SESSION['superAdmin']): ?>
-          <a href="<?php echo URLROOT ?>users/showUsers">
-            <li id="logOutBtn" class="navH">Användare</li>
-          </a>
-        </ul>
-        <?php endif; ?>
+
+        
       </div>
 
       <!-- Logo -->
