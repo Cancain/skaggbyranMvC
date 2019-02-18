@@ -3,11 +3,11 @@
 <div class="wrapper">
     <div class="fullContent pt">
         <div class="centerContent pb">
-    <?php foreach ($data as $user): ?>
-    <?php if ($_SESSION['superAdmin']): ?>
+    <?php foreach ($data['users'] as $user): ?>
+    <?php if ($data['currentUser']->superAdmin): ?>
         <a href="<?php echo URLROOT ?>users/editUser/<?php echo $user->id ?>"> <h3 class="userName"><?php echo $user->userName ?></h3></a>
     <?php endif; ?>
-    <?php if (!$_SESSION['superAdmin']): ?>
+    <?php if (!$data['currentUser']->superAdmin): ?>
         <h3 class="userName"><?php echo $user->userName ?></h3>
     <?php endif; ?>
     <p class="graySm"><?php echo $user->email ?></p>

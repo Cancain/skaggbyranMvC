@@ -6,6 +6,14 @@
         <h1 class="currentUser"><?php echo $data->firstName . ' ' . $data->lastName ?></h1>
         <p class="graySm">Användarnamn: <?php echo $data->userName?></p>
         <p class="graySm">Email: <?php echo $data->email ?></p>
+        
+        <?php if ($data->superAdmin) : ?>
+        <br>
+            <p class="graySm">Du är super-admin, du kan:</p>
+            <a href="<?php echo URLROOT ?>users/showUsers">Redigera Användare</a>
+
+        <?php endif; ?>
+
         </div>
         <div class="profileBox hideonLg">
         <h1 class="currentUser"><?php echo $data->firstName . ' ' . $data->lastName ?></h1>
