@@ -102,18 +102,17 @@
     font-weight: 800;
   }
   .contactBg {
-    @include tabletUp(){
-       
-    grid-template-columns: 25vw 20vw;
-    max-width: 945px;
-    width: 945px;
-     }
      grid-gap: 20px;
      display: inline-grid;
      margin-left: 0 0;
      margin-right: 0 0;
-     max-width: 100vw;
-     width: 100vw;
+     max-width: 100vW;
+     width: 100vW;
+     @include tabletUp(){
+      grid-template-columns: 50% 50%;
+      max-width: 945px;
+      width: 945px;
+       }
     }
      .contactBox {
       background: var(--primary);

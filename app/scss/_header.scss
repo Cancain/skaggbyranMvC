@@ -8,13 +8,16 @@
     display: none;
     margin: 0;
     padding: 0;
-    font-size: 1.5rem;
     text-transform: uppercase;
   
     @include tabletUp() {
       display: inline;
     }
+    @include desktop(){
+      font-size: 1.5rem;
+    }
   }
+
   
   #navBgLg {
     background: $primaryColor;
@@ -77,10 +80,10 @@
   }
   
   #logo {
-    width: 280px;
+    width: 200;
     opacity: 0.75;
     @include tabletUp() {
-      width: 250px;
+      width: 200px;
     }
   }
 
@@ -92,7 +95,7 @@
       background: $primaryColor;
       color: lighten($primaryTextColor, 20%);
       text-align: center;
-      margin: 7.9rem 0 0 0;
+      margin: 7rem 0 0 0;
       padding: 0 0 0 0;
       font-size: 1.1rem;
       text-transform: uppercase;

@@ -9,11 +9,18 @@ $contentText: #747474;
   transition: all 0.5s ease-out;
 }
 
+@mixin desktop {
+  @media (min-width: 1120px) {
+    @content;
+  }
+}
+
 @mixin tabletUp {
   @media (min-width: 768px) {
     @content;
   }
 }
+
 
 @mixin tabletDown {
   @media (max-width: 768px) {
@@ -26,3 +33,4 @@ $contentText: #747474;
     @content;
   }
 }
+

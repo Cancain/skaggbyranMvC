@@ -3,12 +3,15 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 0.7fr 0.5fr 1fr 1fr;
+  grid-template-columns: 0.7fr 1.8fr 0.1fr 1fr;
   grid-template-rows: 0.05fr 0.2fr; }
   @media (min-width: 768px) {
     .grid {
-      grid-template-columns: 0.8fr 0.3fr 1.4fr 0.5fr;
-      margin-bottom: 1rem;
+      grid-template-columns: 0.1fr 1fr 2fr 1fr;
+      grid-template-rows: 20px 100px; } }
+  @media (min-width: 1120px) {
+    .grid {
+      grid-template-columns: 0.2fr 1.5fr 2fr 1fr;
       grid-template-rows: 20px 100px; } }
 
 .box1 {
@@ -17,7 +20,13 @@
   @media (min-width: 768px) {
     .box1 {
       grid-column: 2;
-      grid-row: 2; } }
+      grid-row: 2;
+      margin-left: auto;
+      margin-right: 0; } }
+  @media (max-width: 768px) {
+    .box1 {
+      margin-left: auto;
+      margin-right: auto; } }
 
 .box2 {
   grid-column: 3;
@@ -37,7 +46,7 @@
 
 @media (min-width: 768px) {
   .gridContact {
-    display: grid;
+    display: -moz-inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr; } }
 
@@ -146,11 +155,11 @@ form {
   display: inline-grid;
   margin-left: 0 0;
   margin-right: 0 0;
-  max-width: 100vw;
-  width: 100vw; }
+  max-width: 100vW;
+  width: 100vW; }
   @media (min-width: 768px) {
     .contactBg {
-      grid-template-columns: 25vw 20vw;
+      grid-template-columns: 50% 50%;
       max-width: 945px;
       width: 945px; } }
 
@@ -212,11 +221,13 @@ form {
   display: none;
   margin: 0;
   padding: 0;
-  font-size: 1.5rem;
   text-transform: uppercase; }
   @media (min-width: 768px) {
     #navLg {
       display: inline; } }
+  @media (min-width: 1120px) {
+    #navLg {
+      font-size: 1.5rem; } }
 
 #navBgLg {
   background: #5681a0;
@@ -269,11 +280,11 @@ li:hover {
   background: #5681a0; }
 
 #logo {
-  width: 280px;
+  width: 200;
   opacity: 0.75; }
   @media (min-width: 768px) {
     #logo {
-      width: 250px; } }
+      width: 200px; } }
 
 #dropDownMenuContact {
   position: absolute;
@@ -283,7 +294,7 @@ li:hover {
   background: #5681a0;
   color: #c7d8e4;
   text-align: center;
-  margin: 7.9rem 0 0 0;
+  margin: 7rem 0 0 0;
   padding: 0 0 0 0;
   font-size: 1.1rem;
   text-transform: uppercase; }
@@ -426,7 +437,7 @@ img {
       display: grid;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 150px;
+      margin-top: 140px;
       width: 945px; } }
 
 .centerContent {
