@@ -10,7 +10,20 @@ class Pages extends Controller{
     }
 
     public function about(){
-        $this->view('pages/about');
+        $aboutMain = $this->pageModel->getContentByName('aboutMain');
+        $aboutSubLeft = $this->pageModel->getContentByName('aboutSubLeft');
+        $aboutSubRight = $this->pageModel->getContentByName('aboutSubRight');
+
+        $data = [
+            'currentUser' => $this->userModel->getUserById($_SESSION['userId']),
+            'aboutHeadLine' => $aboutMain->headLine,
+            'aboutText' => $aboutMain->text,
+            'aboutSubLeft' => $aboutSubLeft->text,
+            'aboutSubRight' => $aboutSubRight->text,
+
+        ];
+
+        $this->view('pages/about', $data);
     }
 
     public function arbetstraning(){
@@ -199,7 +212,7 @@ class Pages extends Controller{
             //make sure errors are empty
             if(empty($data['headLineErr']) && empty($data['textErr'])){
                 $this->pageModel->updateContentByName($data);
-                redirect('pages/arbetstraning');
+                redirect('pages/index');
             } else {
                 //return to edit-page with errors
                 $this->view('pages/editText', $data);
