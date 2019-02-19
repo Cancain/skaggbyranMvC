@@ -14,8 +14,17 @@ class Pages extends Controller{
     }
 
     public function arbetstraning(){
+        $arbetstraningMain = $this->pageModel->getContentByName('arbetstraningMain');
+        $arbetstraningSubLeft = $this->pageModel->getContentByName('arbetstraningSubLeft');
+        $arbetstraningSubRight = $this->pageModel->getContentByName('arbetstraningSubRight');
+
         $data = [
             'currentUser' => $this->userModel->getUserById($_SESSION['userId']),
+            'arbetstraningHeadLine' => $arbetstraningMain->headLine,
+            'arbetstraningText' => $arbetstraningMain->text,
+            'arbetstraningSubLeft' => $arbetstraningSubLeft->text,
+            'arbetstraningSubRight' => $arbetstraningSubRight->text,
+
         ];
         $this->view('pages/arbetstraning', $data);
     }
@@ -166,7 +175,51 @@ class Pages extends Controller{
         }        
     }
 
-    public function editText() {
-        $this->view('pages/editText');
+    public function editText($content) {
+
+
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+            $data = [
+                'name' => $_POST['name'],
+                'currentUser' => $this->userModel->getUserById($_SESSION['userId']),
+                'headLine' => $_POST['headLine'],
+                'text' => $_POST['text'], 
+                'headLineErr' => '',
+                'textErr' => ''
+            ];
+
+            //Validate the text
+
+            if(empty($data['text'])){
+                $data['textErr'] = 'Inlägget måste ha något sorts innehåll';
+            }
+
+            //make sure errors are empty
+            if(empty($data['headLineErr']) && empty($data['textErr'])){
+                $this->pageModel->updateContentByName($data);
+                redirect('pages/arbetstraning');
+            } else {
+                //return to edit-page with errors
+                $this->view('pages/editText', $data);
+            }
+
+
+        } else {
+
+            $query = $this->pageModel->getContentByName($content);
+
+            $data = [
+                'currentUser' => $this->userModel->getUserById($_SESSION['userId']),
+                'name' => $query->name,
+                'headLine' => $query->headLine,
+                'text' => $query->text, 
+                'headLineErr' => '',
+                'textErr' => ''
+            ];
+
+            $this->view('pages/editText', $data);
+        }        
     }
 }
