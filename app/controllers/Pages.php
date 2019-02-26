@@ -235,4 +235,12 @@ class Pages extends Controller{
             $this->view('pages/editText', $data);
         }        
     }
+
+    public function uploadImage() {
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+        } else {
+            $this->view('pages/upload');
+        }
+    }
 }
