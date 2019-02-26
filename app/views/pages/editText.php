@@ -1,8 +1,8 @@
 <meta charset="utf-8">
 
 <?php require APPROOT . '/views/inc/header.php'?>
+<div class="wrapper">
 <form action="" method="post">
-    <div class="wrapper">
         <input type="hidden" name="name" value="<?php echo $data['name'] ?>">
         <label for="">Titel</label>
         <input type="text" name="headLine" value="<?php echo $data['headLine'] ?>">
@@ -15,5 +15,4 @@
             <button>Avsluta</button>
 </form>
 </div>
-
 <?php require APPROOT . '/views/inc/footer.php'?>
