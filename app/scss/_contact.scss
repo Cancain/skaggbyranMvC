@@ -30,7 +30,7 @@
       background: var(--primary);
       box-shadow: var(--shadow);
       @include tabletUp(){
-        width: 20vw;
+        width: 80%;
       }
     }
     
@@ -44,7 +44,7 @@
       background: var(--primary);
       box-shadow: var(--shadow);
       @include tabletUp(){
-        width: 20vw;
+        width: 80%;
       }
     }
 
