@@ -11,41 +11,28 @@
 <div class="icon"><i class="fas fa-clipboard-list fa-5x"></i></div>
   </div>
   <div>
-  <div class="gridContact">
-  <div id="box1Contact">
-  <form action="" autocomplete="off" method="POST">
-      <div class="formBox">
+  <form class="fullW" action="" autocomplete="off" method="POST">
         <label for="">Namn</label><br />
         <input class="formField" type="text" name="name"
         value="<?php echo $data['name']?>" />
-      </div>
 
-      <div class="formBox">
         <label for="">Datum</label><br />
         <input class="formField" type="text" name="date" id="date" 
         value="<?php echo $data['date']?>" />
-      </div>
 
-      <div class="formBox">
         <label for="">Email</label><br />
         <input class="formField" type="email" name="email"
         value="<?php echo $data['email']?>"/>
-      </div>
 
-      <div class="formBox">
         <label for="">Meddelande</label><br />
         <textarea class="formMsg" name="message" id="" cols="30" rows="8"><?php echo $data['message']?></textarea><br />
         <button class="formBtn" type="submit" name="submit">Skicka</button>
-      </div>
       <div class="errorMsg">
       <?php if(!empty($data['errMsg'])) : ?>
       <span class="warning"><?php echo $data['errMsg'] ?></span>      
       <?php endif; ?>
       </div>
     </form>
-  </div>
-</div>
-  </div>
 </div>
 </div>
 <script src='<?php echo URLROOT ?>js/js-datepicker/dist/datepicker.min.js'></script>

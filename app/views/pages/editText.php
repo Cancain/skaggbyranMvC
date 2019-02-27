@@ -4,9 +4,12 @@
 <div class="wrapper">
 <div class="contactBg">
     <div class="contactBox">
-    <h1>HTML Taggar</h1>
-    <p class="gray">Använd gärna HTML taggar för formattering av er text. <br>
-                    Nedan följer några exempel:</p>
+    <h1>HTML</h1>
+    <p class="graySm">Använd gärna HTML för formattering av er text. <br>
+                    De flesta HTML-element består av en start- respektive sluttagg, exempelvis: <br>
+                    &lt;b&gt;<b>Bold text</b>&lt;/b&gt; <br> <br>
+                    Nedan följer några exempel på vanliga taggar. <br>
+                    </p>
 &lt;br&gt; - Radbryt <br>
 &lt;b&gt; - <b>Bold text</b> <br>
 &lt;i&gt; - <i>Italic text</i> <br>
