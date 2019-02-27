@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 
+
 <?php require APPROOT . '/views/inc/header.php'?>
 <div class="wrapper">
 <div class="contactBg">
@@ -36,6 +37,12 @@
 
                 <input class="formBtn" type="submit" value="Ändra">
                 <button class="formBtn">Avsluta</button>
+
+                
+                <div id="filebrowserContainer"></div>
+                <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+                <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+                <script src="<?php echo URLROOT ?>public/js/react/Filebrowser.js"></script>
     </form>
     </div>
 </div>
