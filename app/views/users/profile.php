@@ -19,6 +19,12 @@
         <h1 class="currentUser"><?php echo $data->firstName . ' ' . $data->lastName ?></h1>
         <p class="graySm">Användarnamn:<br> <?php echo $data->userName?></p> <br>
         <p class="graySm">Email: <br> <?php echo $data->email ?></p>
+        <?php if ($data->superAdmin) : ?>
+        <br>
+            <p class="graySm">Du är super-admin, du kan:</p>
+            <a href="<?php echo URLROOT ?>users/showUsers">Redigera Användare</a>
+
+        <?php endif; ?>
         </div>
         <div class="profileBox">
         <i class="fas fa-users-cog fa-5x"></i>
