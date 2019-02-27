@@ -10,14 +10,14 @@
                     &lt;b&gt;<b>Bold text</b>&lt;/b&gt; <br> <br>
                     Nedan följer några exempel på vanliga taggar. <br>
                     </p>
-&lt;br&gt; - Radbryt <br>
-&lt;b&gt; - <b>Bold text</b> <br>
-&lt;i&gt; - <i>Italic text</i> <br>
-&lt;em&gt; - <em>Emphasized text</em> <br>
-&lt;mark&gt; - <mark>Marked text</mark> <br>
-&lt;small&gt; - <small>Small text</small> <br>
-&lt;del&gt; - <del>Deleted text</del> <br>
-&lt;u&gt; - <u>Underline text</u> <br>
+        &lt;br&gt; - Radbryt <br>
+        &lt;b&gt; - <b>Bold text</b> <br>
+        &lt;i&gt; - <i>Italic text</i> <br>
+        &lt;em&gt; - <em>Emphasized text</em> <br>
+        &lt;mark&gt; - <mark>Marked text</mark> <br>
+        &lt;small&gt; - <small>Small text</small> <br>
+        &lt;del&gt; - <del>Deleted text</del> <br>
+        &lt;u&gt; - <u>Underline text</u> <br>
     </div>
     <div>
     <form class="fullW" action="" method="post">
