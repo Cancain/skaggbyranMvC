@@ -13,24 +13,16 @@
     <div>
 
 
-      <div class="gridContact">
-        <div id="box1Contact">
-          <form action="" autocomplete="off" method="POST">
-            <div class="formBox">
+          <form  class="fullW" action="" autocomplete="off" method="POST">
               <label for="">Namn</label><br />
-              <input class="formField" type="text" name="name" id="" value="<?php echo $data['name']?>" />
-            </div>
+              <input class="formField" type="text" name="name" id="" value="<?php echo $data['name']?>" /> <br>
 
-            <div class="formBox">
               <label for="">Email</label><br />
               <input class="formField" type="text" name="email" id="" value="<?php echo $data['email']?>" />
-            </div>
 
-            <div class="formBox">
               <label for="">Meddelande</label><br />
               <textarea class="formMsg" name="message" id="" cols="30" rows="8"><?php echo $data['message']?></textarea><br />
               <button class="formBtn" type="submit" name="submit">Skicka</button>
-            </div>
             <div class="errorMsg">
               <?php if(!empty($data['errMsg'])): ?>
               <span class="warning">
@@ -39,9 +31,6 @@
               <?php endif ?>
             </div>
           </form>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <?php require APPROOT . '/views/inc/footer.php'?>
