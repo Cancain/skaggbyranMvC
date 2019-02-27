@@ -14,9 +14,9 @@
  
 <section class="portfolioContainer">
     <header class="content">
-        <h1><?php echo utf8_encode($post->title); ?></h1>
-       <p class="smaller"><?php echo utf8_encode($post->createdAt); ?></p>
-        <p><?php echo utf8_encode($post->body); ?></p>
+        <h1><?php echo $post->title; ?></h1>
+       <p class="smaller"><?php echo $post->createdAt; ?></p>
+        <p><?php echo $post->body; ?></p>
         <?php if($data['user'] && $data['user']->isAdmin): ?>
         
 <div class="right">
