@@ -20,8 +20,8 @@
         <?php if($data['user'] && $data['user']->isAdmin): ?>
         
 <div class="right">
-<a href="<?php echo URLROOT?>portfolios/edit/<?php echo $post->id ?>"><button class="formBtn">Ändra</button></a>
-<a href="<?php echo URLROOT?>portfolios/remove/<?php echo $post->id ?>"><button class="formBtn">Ta bort</button></a>
+<a href="<?php echo URLROOT?>portfolios/edit/<?php echo $post->id ?>">Ändra</a> |
+<a href="<?php echo URLROOT?>portfolios/remove/<?php echo $post->id ?>">Ta bort</a>
 </div>
 
 <?php endif; ?>
