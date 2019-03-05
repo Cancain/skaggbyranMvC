@@ -15,4 +15,3 @@
 
 <body>
 <?php require APPROOT . '/views/inc/navBar.php'?>
-  <div id="mainContent"></div>

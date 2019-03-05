@@ -7,5 +7,11 @@
 
 <script src="<?php echo URLROOT; ?>js/navBar.js"></script>
 </body>
+<script src="https://unpkg.com/react@16.8.3/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.8.3/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="text/babel" src="<?php echo URLROOT; ?>js/fileBrowser.js">
+
+</script>
 
 </html>

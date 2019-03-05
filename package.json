@@ -1,11 +1,12 @@
 {
   "name": "skaggbyrangavle",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "js-datepicker": "^4.0.10",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   },
   "devDependencies": {},
   "scripts": {
@@ -13,5 +14,15 @@
     "scss": "node-sass -w ./app/scss -o public/css/ --recursive"
   },
   "author": "Tomas Eriksson, Dennis Lindgren",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cancain/skaggbyranMvC.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Cancain/skaggbyranMvC/issues"
+  },
+  "homepage": "https://github.com/Cancain/skaggbyranMvC#readme",
+  "description": ""
 }
